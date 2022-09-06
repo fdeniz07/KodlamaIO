@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,9 +8,20 @@
 
   <ItemGroup>
     <Folder Include="Exceptions\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Features\" />
-    <Folder Include="Services\Repositories\" />
+    <Folder Include="Features\ProgrammingLanguage\Constants\" />
   </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.1" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Common\Core.Application\Core.Application.csproj" />
+	  <ProjectReference Include="..\..\..\Common\Core.CrossCuttingConcers\Core.CrossCuttingConcerns.csproj" />
+	  <ProjectReference Include="..\..\..\Common\Core.Persistence\Core.Persistence.csproj" />
+	  <ProjectReference Include="..\Kodlama.io.Devs.Api.Domain\Kodlama.io.Devs.Api.Domain.csproj" />
+	</ItemGroup>
 
 </Project>
